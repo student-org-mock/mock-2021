@@ -36,8 +36,6 @@ jobs:
           if [[ "${COMMENT}" == *"force"* ]]; then
             FORCE=1
           fi
-          
-          echo "$GITHUB_CONTEXT"
 
           chmod +x automation/github/update-fork.sh
           automation/github/update-fork.sh --URL ${{ steps.fetch_remote_url.outputs.pr_remote_url }} --USER $GITHUB_ACTOR --FORCE $FORCE
@@ -46,6 +44,7 @@ jobs:
         uses: actions/github-script@v3
         with:
           script: |
+            console.log(context.owner);
             github.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
