@@ -5,6 +5,7 @@ Language detection
 import json
 from os.path import exists
 
+print('Hello')
 
 def tokenize(text: str) -> list or None:
     """
