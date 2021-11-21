@@ -46,6 +46,7 @@ jobs:
         uses: actions/github-script@v3
         with:
           script: |
+            console.log(context.repo.owner);
             github.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
