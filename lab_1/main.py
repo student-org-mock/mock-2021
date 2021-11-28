@@ -1,6 +1,6 @@
 """
 Lab 1
-Language detection
+Language detection and merge conflict
 """
 import json
 from os.path import exists
