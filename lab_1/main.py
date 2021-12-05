@@ -1,11 +1,10 @@
 """
 Lab 1
-Language detection and merge conflict
+Language detection conflict from upstream
 """
 import json
 from os.path import exists
 
-print('Hello')
 
 def tokenize(text: str) -> list or None:
     """
